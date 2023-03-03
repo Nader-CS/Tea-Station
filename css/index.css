@@ -54,6 +54,7 @@ a {
   font-size: 2rem;
   font-family: var(--slantedTetxt);
   color: var(--primaryColor);
+  animation: slideFromRight 5s ease-in-out 1;
 }
 /* Banner title */
 .banner-title {
@@ -62,6 +63,7 @@ a {
   color: var(--mainWhite);
   margin-top: 2.5rem;
   line-height: 1.3;
+  animation: slideFromLeft 5s ease-in-out 1;
 }
 /* Banner btn */
 .main-btn,
@@ -85,5 +87,47 @@ a {
 }
 .banner-btn {
   padding: 1.2rem 1.5rem;
+  animation: show 5s ease-in-out 1;
 }
 /* End of Header */
+
+/* Animation */
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+  75% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  75% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* End of Animation */
