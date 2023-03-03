@@ -15,12 +15,31 @@
   --mainTransition: all 0.3s ease-in-out;
   --leterSpacing: 0.5rem;
 }
+/* global classes */
 .clearfix::after,
 .clearfix::before {
   content: "";
   clear: both;
   display: table;
 }
+.section-center {
+  padding: 4rem 0;
+  width: 80vw;
+  max-width: 1170px; /* for bigger screens , we want to see it as same */
+  margin: 0 auto;
+}
+.section-subtitle {
+  font-size: 2rem;
+  font-family: var(--slantedTetxt);
+  letter-spacing: var(--leterSpacing);
+  text-transform: uppercase;
+  color: var(--primaryColor);
+}
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+/* End of global classes */
 body {
   font-family: "Catamaran", sans-serif;
   line-height: 1.5;
@@ -197,3 +216,40 @@ a {
   }
 }
 /* End of Skills */
+/* about */
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+.about-picture {
+  width: 100%;
+  display: block;
+}
+.about-picture-container {
+  background: var(--primaryColor);
+  border: 0.5rem solid var(--primaryColor);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.about-picture {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+.about-picture-container:hover .about-picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.about-text {
+  margin: 1rem 0;
+  max-width: 26rem;
+}
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+  }
+}
+/* End of about */
