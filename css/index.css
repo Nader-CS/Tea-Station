@@ -15,6 +15,12 @@
   --mainTransition: all 0.3s ease-in-out;
   --leterSpacing: 0.5rem;
 }
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
 body {
   font-family: "Catamaran", sans-serif;
   line-height: 1.5;
@@ -142,3 +148,52 @@ a {
   );
 }
 /* End of content divider */
+/* Skills */
+.skills {
+  background-color: var(--mainGrey);
+}
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+.skill-icon {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--mainTransition);
+}
+.skill-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: var(--leterSpacing);
+  margin-bottom: 1.5rem;
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.skill-text {
+  max-width: 13rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  background: var(--primaryColor);
+}
+.skill:hover .skill-title {
+  color: var(--mainWhite);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
+/* End of Skills */
