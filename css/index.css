@@ -253,3 +253,65 @@ a {
   }
 }
 /* End of about */
+/* products */
+.products {
+  background: var(--mainDark);
+}
+.products-info,
+.products-inventory {
+  padding: 2rem 0;
+}
+.product-text {
+  color: var(--mainWhite);
+  margin: 1rem 0;
+  max-height: 26rem;
+}
+.product-img {
+  width: 100%;
+  display: block;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+}
+.products-inventory article {
+  padding: 2rem 0;
+}
+.product-title {
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: var(--leterSpacing);
+  margin-bottom: 1rem;
+}
+.product-price {
+  color: var(--primaryColor);
+  letter-spacing: var(--leterSpacing);
+  font-family: var(--slantedTetxt);
+}
+@media screen and (min-width: 768px) {
+  .products-inventory article {
+    float: left;
+    width: 50%;
+    padding: 2rem 1rem;
+  }
+  .products-info {
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .products-inventory article {
+    width: 33.3333333%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-info {
+    float: left;
+    width: 30%;
+  }
+  .products-inventory {
+    float: left;
+    width: 70%;
+  }
+  .products-inventory article {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+}
+/* End of products */
