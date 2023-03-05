@@ -82,6 +82,48 @@ a {
   }
 }
 /* End of navbar button */
+/*navbar*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: var(--mainGrey);
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  transition: var(--mainTransition);
+  transform: translateX(-100%);
+}
+.showNav {
+  transform: translateX(0);
+}
+.nav-close {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.nav-items {
+  list-style-type: none;
+}
+.nav-link {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.nav-link:hover {
+  color: var(--mainDark);
+  padding-left: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 30vw;
+    max-width: 20rem;
+  }
+}
+/*End of navbar*/
 /* Header */
 .header {
   min-height: 100vh;
